@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import styles from './contacts-page.module.scss'
 import Socials from '@/components/socials'
 import Script from 'next/script'
+import TLSearch from '@/components/tl-search'
 
 const ContactsPage = () => {
   return (
@@ -48,6 +49,7 @@ const ContactsPage = () => {
               />
             </div>
           </div>
+          <TLSearch />
           <div className={styles.map}>
             <iframe
               src='https://yandex.ru/map-widget/v1/?um=constructor%3A3cac6b81433c74efad60c5472763be7f90b7fdf9b21411b0cbf9d96cbeb4757a&amp;source=constructor'

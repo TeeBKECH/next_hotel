@@ -3,6 +3,8 @@ import styles from './about-page.module.scss'
 import MySwiper from '@/components/swiper'
 import Image from 'next/image'
 import Link from 'next/link'
+import Button from '@/components/ui/button'
+import TLSearch from '@/components/tl-search'
 
 const AboutPage = () => {
   return (
@@ -10,6 +12,7 @@ const AboutPage = () => {
       <section className={clsx('section', styles.about)}>
         <div className={clsx('container', styles.container)}>
           <MySwiper />
+          <TLSearch />
           <div className={clsx(styles.content)}>
             <div className={styles.devider}></div>
             <div className={styles.title}>

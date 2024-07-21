@@ -21,16 +21,11 @@ const TLScript = () => {
   const ref = useRef(false)
 
   useEffect(() => {
-    // console.log('pathname ', pathname)
     const t = (window.travelline = window.travelline || {}),
       ti = (t.integration = t.integration || {})
     if (!ref.current) {
-      // console.log(ref.current)
-      // console.log(ti)
       ti.__cq = ti.__cq ? ti.__cq.concat(tlArr) : tlArr
     } else {
-      // console.log(ref.current)
-      // console.log(ti)
       ti.__cq.concat(tlArr)
     }
     ref.current = true
@@ -63,7 +58,7 @@ const TLScript = () => {
     }
 
     if (!ti.__loader) {
-      ti.__loader = true
+      // ti.__loader = true
       createLoaderScript(script, tlDomainArr)
     }
 
