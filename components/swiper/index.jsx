@@ -60,10 +60,10 @@ const MySwiper = () => {
           swiper.params.navigation.prevEl = navigationPrevRef.current
           swiper.params.navigation.nextEl = navigationNextRef.current
         }}
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
+        // navigation={{
+        //   prevEl: navigationPrevRef.current,
+        //   nextEl: navigationNextRef.current,
+        // }}
       >
         {images.map((image, index) => {
           return (
