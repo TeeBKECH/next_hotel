@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.ornament {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 8px);
+  z-index: 1;
+  background: repeat-x center/13% url('/assets/img/bg-ornament.png');
+  overflow: hidden;
+
+  @media screen and (max-width: 991px) {
+    background-size: 25%;
+  }
+
+  @media screen and (max-width: 550px) {
+    background-size: 35%;
+  }
+}
+.ornament-fh {
+  height: 100%;
+}
+.ornament-o1 {
+  opacity: 0.1;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ddcab0 45%, #423d38 55%, #ddcab0);
+  background-clip: text;
+  background-size: 310%;
+  -webkit-text-fill-color: transparent;
+  color: #776d62;
+  display: flex;
+}
+.gradient-text-animate {
+  animation: text-gradient-animate 13s ease-in-out infinite;
+}
+
+@keyframes text-gradient-animate {
+  0% {
+    background-position: 140% 50%;
+  }
+  50% {
+    /* background-position: 0% 50%; */
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
