@@ -1,0 +1,218 @@
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  padding: 40px 60px;
+  background: linear-gradient(to top, rgba(#000, 0.04), rgba(#fff, 1));
+
+  @media screen and (max-width: 1400px) {
+    gap: 40px;
+    padding: 40px 30px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px 10px;
+  }
+
+  &_item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+
+  .item {
+    &_image {
+      width: 100%;
+      height: 20vw;
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+
+      @media screen and (max-width: 1200px) {
+        height: 30vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 60vw;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &_services {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      width: fit-content;
+      min-width: 20%;
+      height: 100%;
+      padding: 15px 30px;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      gap: 25px;
+      flex-wrap: wrap-reverse;
+      background: linear-gradient(to left, rgba(#000, 1), rgba(#000, 0.6) 80%, rgba(#000, 0));
+    }
+
+    &_service {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      position: relative;
+
+      span {
+        position: absolute;
+        right: 110%;
+        top: 50%;
+        z-index: 3;
+        transform: translateY(-50%);
+        background: linear-gradient(to right, rgba(#121213, 1), rgba(#282b2e, 1));
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s linear;
+        display: inline-block;
+        width: max-content;
+      }
+
+      &:hover {
+        span {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 0 15px;
+    }
+
+    &_title {
+      h3 {
+        font-size: clamp(18px, 3vw, 22px);
+        color: #000;
+        font-weight: 700;
+      }
+    }
+
+    &_info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      &_block {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    &_devider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(#423d38, 1),
+        rgba(#ddcab0, 1),
+        rgba(#423d38, 1),
+        rgba(#ddcab0, 1)
+      );
+      opacity: 0.4;
+    }
+
+    &_description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+
+      p {
+        font-size: clamp(16px, 3vw, 18px);
+        color: rgba(#000, 0.7);
+        line-height: 1.3;
+      }
+    }
+
+    &_actions {
+    }
+  }
+}
+
+.more {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #000;
+  background-size: 150%;
+  background-position: 100% 100%;
+  padding: 15px 25px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+
+  &::after,
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s linear;
+    z-index: 1;
+  }
+
+  &:after {
+    background: linear-gradient(45deg, rgba(#776d62, 1), rgba(#ddcab0, 1));
+    opacity: 1;
+  }
+
+  &:before {
+    background: linear-gradient(45deg, rgba(#ddcab0, 1), rgba(#776d62, 1));
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+}

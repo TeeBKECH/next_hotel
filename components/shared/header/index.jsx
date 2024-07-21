@@ -40,8 +40,8 @@ const header = () => {
 
   const pathname = usePathname()
 
-  const mobileMenuToggler = () => {
-    setShowMenu(!showMenu)
+  const mobileMenuToggler = (toggle) => {
+    setShowMenu(!toggle)
   }
 
   const scrollHandler = useCallback((e) => {
@@ -90,7 +90,7 @@ const header = () => {
                 <Link
                   key={i}
                   href={link.href}
-                  onClick={mobileMenuToggler}
+                  onClick={() => mobileMenuToggler(true)}
                   className={clsx(
                     styles.link,
                     pathname == link.href ? `${styles.link_active}` : '',
@@ -102,12 +102,12 @@ const header = () => {
             })}
           </nav>
           <div className={styles.booking}>
-            <Button tl={true}>Забронировать</Button>
+            <Button tl>Забронировать</Button>
           </div>
         </div>
         <div
           className={styles.burger}
-          onClick={mobileMenuToggler}
+          onClick={() => mobileMenuToggler(showMenu)}
         >
           <span className={styles.burger_item}></span>
           <span className={styles.burger_item}></span>
