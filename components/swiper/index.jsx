@@ -36,8 +36,8 @@ const MySwiper = () => {
     <div className={styles.swiper_box}>
       <button
         ref={navigationPrevRef}
-        className={clsx(styles.swiper_btn, styles.swiper_prev)}
-      >{`<`}</button>
+        className={clsx(styles.swiper_btn, styles.swiper_next)}
+      >{`>`}</button>
       <Swiper
         className={styles.swiper}
         modules={[Navigation]}
@@ -80,8 +80,8 @@ const MySwiper = () => {
       </Swiper>
       <button
         ref={navigationNextRef}
-        className={clsx(styles.swiper_btn, styles.swiper_next)}
-      >{`>`}</button>
+        className={clsx(styles.swiper_btn, styles.swiper_prev)}
+      >{`<`}</button>
     </div>
   )
 }
