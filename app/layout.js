@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import { Header } from '@/components/shared'
 import { Footer } from '@/components/shared'
 
-import '../node_modules/swiper/swiper.scss'
 import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })

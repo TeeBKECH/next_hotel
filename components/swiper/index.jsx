@@ -3,10 +3,11 @@
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-
-import styles from './swiper.module.scss'
 import clsx from 'clsx'
 import Image from 'next/image'
+
+import '../../node_modules/swiper/swiper.scss'
+import styles from './swiper.module.scss'
 
 const images = [
   {
