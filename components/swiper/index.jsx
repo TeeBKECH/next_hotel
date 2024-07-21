@@ -3,8 +3,7 @@
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
+
 import styles from './swiper.module.scss'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -36,8 +35,8 @@ const MySwiper = () => {
     <div className={styles.swiper_box}>
       <button
         ref={navigationPrevRef}
-        className={clsx(styles.swiper_btn, styles.swiper_next)}
-      >{`>`}</button>
+        className={clsx(styles.swiper_btn, styles.swiper_prev)}
+      >{`<`}</button>
       <Swiper
         className={styles.swiper}
         modules={[Navigation]}
@@ -80,8 +79,8 @@ const MySwiper = () => {
       </Swiper>
       <button
         ref={navigationNextRef}
-        className={clsx(styles.swiper_btn, styles.swiper_prev)}
-      >{`<`}</button>
+        className={clsx(styles.swiper_btn, styles.swiper_next)}
+      >{`>`}</button>
     </div>
   )
 }

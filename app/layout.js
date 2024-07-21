@@ -2,8 +2,8 @@ import { Inter } from 'next/font/google'
 
 import { Header } from '@/components/shared'
 import { Footer } from '@/components/shared'
-import TLScript from '@/components/tl-script'
 
+import '../node_modules/swiper/swiper.scss'
 import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
-        {/* <TLScript /> */}
       </body>
     </html>
   )
