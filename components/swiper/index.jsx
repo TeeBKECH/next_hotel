@@ -6,7 +6,7 @@ import { Navigation } from 'swiper/modules'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import '../../node_modules/swiper/swiper.scss'
+import '../../node_modules/swiper/swiper.min.css'
 import styles from './swiper.module.scss'
 
 const images = [
