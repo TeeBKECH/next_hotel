@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import styles from './swiper.module.scss'
@@ -40,7 +40,7 @@ const MySwiper = () => {
       >{`<`}</button>
       <Swiper
         className={styles.swiper}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         slidesPerView={1.2}
         spaceBetween={30}
         breakpoints={{
@@ -60,10 +60,10 @@ const MySwiper = () => {
           swiper.params.navigation.prevEl = navigationPrevRef.current
           swiper.params.navigation.nextEl = navigationNextRef.current
         }}
-        // navigation={{
-        //   prevEl: navigationPrevRef.current,
-        //   nextEl: navigationNextRef.current,
-        // }}
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current,
+        }}
       >
         {images.map((image, index) => {
           return (
