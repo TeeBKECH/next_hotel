@@ -6,7 +6,8 @@ import { Navigation } from 'swiper/modules'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import '../../node_modules/swiper/swiper.min.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
 import styles from './swiper.module.scss'
 
 const images = [
@@ -38,6 +39,10 @@ const MySwiper = () => {
         ref={navigationPrevRef}
         className={clsx(styles.swiper_btn, styles.swiper_prev)}
       >{`<`}</button>
+      <button
+        ref={navigationNextRef}
+        className={clsx(styles.swiper_btn, styles.swiper_next)}
+      >{`>`}</button>
       <Swiper
         className={styles.swiper}
         modules={[Navigation]}
@@ -78,10 +83,6 @@ const MySwiper = () => {
           )
         })}
       </Swiper>
-      <button
-        ref={navigationNextRef}
-        className={clsx(styles.swiper_btn, styles.swiper_next)}
-      >{`>`}</button>
     </div>
   )
 }
