@@ -102,7 +102,7 @@ const header = () => {
             })}
           </nav>
           <div className={styles.booking}>
-            <Button tl>Забронировать</Button>
+            <Button>Забронировать</Button>
           </div>
         </div>
         <div

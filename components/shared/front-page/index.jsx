@@ -1,11 +1,11 @@
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import TLSearch from '@/components/tl-search'
 import styles from './front-page.module.scss'
 import Button from '@/components/ui/button'
 import Link from 'next/link'
 import Rooms from '@/components/rooms'
+import BookingSearch from '@/components/booking/BookingSearch'
 
 const FrontPage = () => {
   return (
@@ -74,7 +74,7 @@ const FrontPage = () => {
             </div>
           </div>
           <div className={styles.intro_booking}>
-            <TLSearch />
+            <BookingSearch />
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 
-import { Header } from '@/components/shared'
-import { Footer } from '@/components/shared'
+import { Header, Footer } from '@/components/shared'
+import Script from 'next/script'
 
 import './globals.scss'
 
@@ -15,6 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='ru'>
+      <head>
+        <Script
+          src='https://bookonline24.ru/widget.js'
+          strategy='beforeInteractive'
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
