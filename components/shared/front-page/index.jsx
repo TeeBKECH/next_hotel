@@ -4,8 +4,10 @@ import Image from 'next/image'
 import styles from './front-page.module.scss'
 import Button from '@/components/ui/button'
 import Link from 'next/link'
-import Rooms from '@/components/rooms'
 import BookingSearch from '@/components/booking/BookingSearch'
+import BookingRooms from '@/components/booking/BookingRooms'
+import BookingDates from '@/components/booking/BookingDates'
+import Socials from '@/components/socials'
 
 const FrontPage = () => {
   return (
@@ -62,14 +64,17 @@ const FrontPage = () => {
             </div>
             <div className={styles.intro_back}>
               <div className={styles.intro_devider}></div>
-              <p className='gradient-text'>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные
-                тексты. Снова лучше взобравшись продолжил буквенных вершину
-              </p>
-              <p className='gradient-text'>
-                Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные
-                тексты.
-              </p>
+              <h3 className='gradient-text'>Бронируйте номера</h3>
+
+              <a
+                className='gradient-text'
+                target='_blank'
+                rel='noindex nofollow'
+                href='tel:+79264546898'
+              >
+                8 (926) 454-68-98
+              </a>
+              <Socials />
               <div className={clsx(styles.intro_devider, styles.intro_devider_reverse)}></div>
             </div>
           </div>
@@ -81,45 +86,16 @@ const FrontPage = () => {
       <section className={clsx('section', styles.about)}>
         <div className={clsx('container', styles.about_container)}>
           <div className={clsx(styles.about_title)}>
-            <h2 className='gradient-text gradient-text-animate'>Об Отеле</h2>
+            <h2 className='gradient-text gradient-text-animate'>Доступные даты</h2>
             <div className={styles.about_devider}></div>
           </div>
           <div className={clsx(styles.about_content)}>
-            <p>
-              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-              Подпоясал однажды свое даль от всех.
-            </p>
-            <p>
-              Раз образ силуэт бросил свой. Свою пунктуация осталось вопроса рукопись, подпоясал
-              текст своих Себя. Раз образ силуэт бросил свой. Свою пунктуация осталось вопроса
-              рукопись, подпоясал текст своих агентство? Себя.
-            </p>
-            <p>
-              Текст несколько взгляд путь, наш последний собрал свою сих образ языком по всей
-              подзаголовок парадигматическая напоивший.
-            </p>
-            <p>
-              Назад вскоре напоивший безорфографичный рыбными они предупреждал знаках. Переулка одна
-              страну рыбными рукописи. Заманивший, образ силуэт бросил свой. Свою пунктуация
-              осталось вопроса рукопись, подпоясал текст своих агентство? Себя. Раз образ силуэт
-              бросил свой. Свою пунктуация осталось вопроса рукопись, подпоясал текст своих
-              агентство? Себя.
-            </p>
-            <p>
-              Запятой снова инициал рыбного залетают коварных деревни над заглавных дал, которое
-              великий! Пустился, власти раз!
-            </p>
-            <Link
-              href='/about'
-              className={styles.about_more}
-            >
-              Подробнее &rarr;
-            </Link>
+            <BookingDates />
           </div>
         </div>
       </section>
-      <Rooms />
-      <section
+      <BookingRooms />
+      {/* <section
         id='shares'
         className={clsx('section', styles.shares)}
       >
@@ -223,7 +199,7 @@ const FrontPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

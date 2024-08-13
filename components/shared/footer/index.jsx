@@ -24,12 +24,12 @@ const footer = () => {
             <li>
               <Link href='/#rooms'>Номера</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/#shares'>Тарифы</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href='/about'>Об отеле</Link>
-            </li>
+            </li> */}
             <li>
               <Link href='/contacts'>Контакты</Link>
             </li>
@@ -49,7 +49,13 @@ const footer = () => {
                 fill='#423d38'
               />
             </svg>
-            <a href='#'>+7 999 999 99 99</a>
+            <a
+              target='_blank'
+              rel='noindex nofollow'
+              href='tel:+79264546898'
+            >
+              8 (926) 454-68-98
+            </a>
           </div>
           <div className={styles.contacts_item}>
             <svg
@@ -72,7 +78,13 @@ const footer = () => {
                 d='M66.6 75.4c-1.5 1.3-3.7 1.3-5.2 0L24 43.5V85c0 2.2 1.8 4 4 4h72c2.2 0 4-1.8 4-4V43.4l-37.4 32z'
               />
             </svg>
-            <a href='#'>khovansky@friendlyinn.ru</a>
+            <a
+              target='_blank'
+              rel='noindex nofollow'
+              href='mailto:khovanskyhotel@gmail.com'
+            >
+              khovanskyhotel@gmail.com
+            </a>
           </div>
         </div>
         <div className={styles.copy}>&copy; {new Date().getFullYear()}. Все права защищены</div>

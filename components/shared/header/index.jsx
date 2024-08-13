@@ -20,14 +20,14 @@ const menuLinks = [
     href: '/#rooms',
     title: 'Номера',
   },
-  {
-    href: '/#shares',
-    title: 'Тарифы',
-  },
-  {
-    href: '/about',
-    title: 'Об Отеле',
-  },
+  // {
+  //   href: '/#shares',
+  //   title: 'Тарифы',
+  // },
+  // {
+  //   href: '/about',
+  //   title: 'Об Отеле',
+  // },
   {
     href: '/contacts',
     title: 'Контакты',
@@ -101,9 +101,9 @@ const header = () => {
               )
             })}
           </nav>
-          <div className={styles.booking}>
+          {/* <div className={styles.booking}>
             <Button>Забронировать</Button>
-          </div>
+          </div> */}
         </div>
         <div
           className={styles.burger}

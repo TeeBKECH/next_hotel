@@ -23,11 +23,23 @@ const ContactsPage = () => {
               </div>
               <div className={styles.content_item}>
                 <h3>Телефон:</h3>
-                <a href='#'>+7 999 999 99 99</a>
+                <a
+                  target='_blank'
+                  rel='noindex nofollow'
+                  href='tel:+79264546898'
+                >
+                  8 (926) 454-68-98
+                </a>
               </div>
               <div className={styles.content_item}>
                 <h3>Почта:</h3>
-                <a href='#'>khovansky@friendlyinn.ru</a>
+                <a
+                  target='_blank'
+                  rel='noindex nofollow'
+                  href='mailto:khovanskyhotel@gmail.com'
+                >
+                  khovanskyhotel@gmail.com
+                </a>
               </div>
             </div>
             <div className={styles.form}>

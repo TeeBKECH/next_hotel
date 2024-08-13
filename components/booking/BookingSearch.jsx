@@ -21,6 +21,13 @@ const BookingSearch = () => {
     }
     tryInitWidget()
 
+    HotelWidget.add({
+      type: 'horizontalBlock',
+      appearance: {
+        container: 'bookingSearch',
+      },
+    })
+
     return function () {
       return clearTimeout(timeoutId)
     }
@@ -41,12 +48,6 @@ const BookingSearch = () => {
         onBooking: function (v) {
           console.log('onBooking', v)
         },
-      },
-    })
-    HotelWidget.add({
-      type: 'horizontalBlock',
-      appearance: {
-        container: 'bookingSearch',
       },
     })
   }, [])

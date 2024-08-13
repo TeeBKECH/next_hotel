@@ -9,14 +9,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 
 .info {
   background: #fff;
-  padding: 20px 30px;
+  padding: 50px 30px 40px;
   width: 100%;
-  border-radius: 4px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;

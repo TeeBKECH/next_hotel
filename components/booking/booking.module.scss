@@ -2,12 +2,33 @@
   width: 100%;
   padding: 0 20px;
   border-radius: 8px;
-
   position: relative;
   z-index: 5;
 
-  a {
-    color: #000;
-    text-align: center;
+  button {
+    background: linear-gradient(45deg, #776d62, #ddcab0);
+    border: none;
+    border-radius: 4px !important;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: linear-gradient(45deg, #776d62, #ddcab0);
+    }
+  }
+}
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding: 40px 60px;
+  background: linear-gradient(to top, rgba(#000, 0.04), rgba(#fff, 1));
+
+  @media screen and (max-width: 991px) {
+    padding: 30px 10px;
   }
 }
