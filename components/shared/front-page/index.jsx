@@ -15,7 +15,7 @@ const FrontPage = () => {
       <section className={clsx('section', styles.intro)}>
         <div className={styles.intro_bg}>
           <Image
-            src='/assets/img/rooms/family/2.webp'
+            src='/assets/img/bg/bg.webp'
             alt='bg'
             fill
             sizes='100vw'
