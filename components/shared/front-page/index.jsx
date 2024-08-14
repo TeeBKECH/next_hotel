@@ -28,8 +28,8 @@ const FrontPage = () => {
               <div className={styles.intro_stars}>
                 <Image
                   src='/assets/img/star.svg'
-                  width={15}
-                  height={15}
+                  width={20}
+                  height={20}
                   alt='star icon'
                 />
                 <Image
@@ -40,20 +40,14 @@ const FrontPage = () => {
                 />
                 <Image
                   src='/assets/img/star.svg'
-                  width={25}
-                  height={25}
-                  alt='star icon'
-                />
-                <Image
-                  src='/assets/img/star.svg'
                   width={20}
                   height={20}
                   alt='star icon'
                 />
                 <Image
                   src='/assets/img/star.svg'
-                  width={15}
-                  height={15}
+                  width={20}
+                  height={20}
                   alt='star icon'
                 />
               </div>
