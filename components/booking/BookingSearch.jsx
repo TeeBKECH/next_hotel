@@ -1,12 +1,9 @@
 'use client'
 
 import styles from './booking.module.scss'
-import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
 const BookingSearch = () => {
-  const pathname = usePathname()
-
   const initWidget = (config) => {
     let timeoutId
 
