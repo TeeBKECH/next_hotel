@@ -86,6 +86,14 @@ const footer = () => {
               khovanskyhotel@gmail.com
             </a>
           </div>
+          <div className={styles.banner}>
+            <a
+              target='_blank'
+              id='hotels101_partner_widget_748'
+              style={{ textDecoration: 'none', display: 'block', width: '300px', height: '60px' }}
+              href='https://101hotels.com/main/cities/moskva/otel_palati_hovanskih_1.html'
+            ></a>
+          </div>
         </div>
         <div className={styles.copy}>&copy; {new Date().getFullYear()}. Все права защищены</div>
       </div>

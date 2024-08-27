@@ -43,6 +43,19 @@ export default function RootLayout({ children }) {
                 ecommerce:"dataLayer"
             });`}
         </Script>
+        <Script
+          id='banner-101hotel'
+          strategy='afterInteractive'
+        >
+          {`(function() {
+                    var script   = document.createElement('script'), generated_id = 748;
+                    script.type  = 'text/javascript';
+                    script.async = true;
+                    script.src   = 'https://101hotels.com/widget/generator/' + generated_id + '/668499/t-8/without-hover';
+                    var node = document.getElementsByTagName('head')[0];
+                    node.appendChild(script);
+                }());`}
+        </Script>
       </body>
     </html>
   )
