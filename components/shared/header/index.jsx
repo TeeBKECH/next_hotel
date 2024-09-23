@@ -76,7 +76,7 @@ const header = () => {
             alt='Адрес отеля'
           />
           <a
-            href='https://yandex.ru/maps/org/khovanskiy/20907662265/'
+            href='https://yandex.ru/maps/-/CDH8ZRNg'
             target='_blank'
             rel='nofollow noindex'
           >
