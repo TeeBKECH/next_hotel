@@ -43,7 +43,23 @@ const BookingSearch = () => {
           console.log('onInit')
         },
         onBooking: function (v) {
-          console.log('onBooking', v)
+          console.log('onBooking-> ', v)
+          window.dataLayer.push({
+            ecommerce: {
+              currencyCode: 'RUB',
+              purchase: {
+                actionField: {
+                  id: v[0].id,
+                  goal_id: 348956081,
+                },
+                products: v.map((order) => ({
+                  name: order.roomCategory,
+                  price: order.price,
+                  quantity: 1,
+                })),
+              },
+            },
+          })
         },
       },
     })

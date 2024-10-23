@@ -41,7 +41,8 @@ export default function RootLayout({ children }) {
                 accurateTrackBounce:true,
                 webvisor:true,
                 ecommerce:"dataLayer"
-            });`}
+            });
+            window.dataLayer = window.dataLayer || [];`}
         </Script>
         <Script
           id='banner-101hotel'
